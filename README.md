@@ -15,6 +15,11 @@ I build ML systems that go beyond notebooks into production with tests, monitori
 
 ## Projects
 
+### [Slonik-7B](https://github.com/phanipal/slonik-7b) — PostgreSQL Text-to-SQL Specialist
+QLoRA SFT + 2000-step GRPO with execution-based rewards on Qwen2.5-Coder-7B. Achieves **38.20% on BIRD Mini-Dev PostgreSQL — beating GPT-4o (34.44%)** and 15+ points above Qwen2.5-Coder-32B, plus 45.20% on BIRD Mini-Dev SQLite. Trained on a single RTX 5080 Laptop GPU (16 GB VRAM) in ~24h, ~$3 in API costs. Three reward signals (execution match, sqlglot syntax, format) against live Postgres+pgvector. Models published as safetensors and GGUF (Q4_K_M/Q5_K_M/Q8_0) for Ollama/llama.cpp.
+
+`Python` `PyTorch` `Unsloth` `TRL` `QLoRA` `GRPO` `Qwen` `PostgreSQL` `pgvector` `sqlglot` `llama.cpp` `GGUF`
+
 ### [IntelliDesk](https://github.com/phanipal/Intellidesk) — AI-Powered IT Service Desk
 ML ticket-triage system with dual XGBoost classifiers for category and priority. Solved a 12:1 class imbalance using sqrt-scaled weights after standard balanced weighting hurt F1. Sentence-transformer + FAISS retriever for knowledge base search. MLflow tracking, Evidently drift monitoring, 39-check validation suite, full CI/CD.
 
