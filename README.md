@@ -15,6 +15,11 @@ I build ML systems that go beyond notebooks into production with tests, monitori
 
 ## Projects
 
+### [OmniAsk](https://github.com/phanipal/omniask) — Production Agentic AI Assistant
+A **LangGraph router reasons over each request** and sends it to read-only text-to-SQL, document RAG with citations, or a human-approved action (human-in-the-loop). LiteLLM gateway across Claude, GPT-4o, DeepSeek, and a fine-tuned Slonik model, with database-level guardrails for safe writes. BGE-M3 hybrid retrieval with reranking, tools exposed over MCP, and a streaming FastAPI + web UI with Postgres-backed checkpointing for multi-step runs. Full Langfuse and Prometheus/Grafana observability, deployed on Kubernetes with KEDA autoscaling.
+
+`Python` `LangGraph` `LiteLLM` `Claude` `GPT-4o` `DeepSeek` `Ollama` `FastAPI` `PostgreSQL` `pgvector` `BGE-M3` `MCP` `Docker` `Kubernetes` `Langfuse`
+
 ### [Slonik-7B](https://github.com/phanipal/slonik-7b) — PostgreSQL Text-to-SQL Specialist
 QLoRA SFT + 2000-step GRPO with execution-based rewards on Qwen2.5-Coder-7B. Achieves **38.20% on BIRD Mini-Dev PostgreSQL — beating GPT-4o (34.44%)** and 15+ points above Qwen2.5-Coder-32B, plus 45.20% on BIRD Mini-Dev SQLite. Trained on a single RTX 5080 Laptop GPU (16 GB VRAM) in ~24h, ~$3 in API costs. Three reward signals (execution match, sqlglot syntax, format) against live Postgres+pgvector. Models published as safetensors and GGUF (Q4_K_M/Q5_K_M/Q8_0) for Ollama/llama.cpp.
 
